@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+</head>
+<body>
+
+
+<div class="centered">
+
+  <%= form_for :post, url: posts_path do |f| %>
+    <p>
+      <%= f.label :number %>
+      <%= f.text_field :number %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+</div>
+
+
+</body>
+</html>

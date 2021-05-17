@@ -1,2 +1,48 @@
-<h1>Algebra Rocks</h1>
-<p>Find me in app/views/algebra/AlgResults.html.erb</p>
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="algebra.css">
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <h1>
+      <img src="https://media.giphy.com/media/DHqth0hVQoIzS/giphy.gif" width="200" height="100">
+      Algebra Rocks
+      <img src="https://media2.giphy.com/media/26xBI73gWquCBBCDe/giphy.gif?cid=ecf05e47vrwji1rgg7zmodhx2odnoudsxmrmewp4ijkvokri&rid=giphy.gif&ct=g" width="200" height="100">
+    </h1>
+<body style = "background-color: cadetblue">
+
+
+<div class = "IO">
+  <%= form_for :post, url: posts_path do |f| %>
+    <p>
+      <%= f.label :number %>
+      <%= f.text_field :@num %>
+        <br>
+      <%= f.label :number %>
+      <%= f.text_field :@num2 %>
+      <br>
+
+      <%= f.label :Output %>
+      <%= f.text_field :@AlgResults %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+</div>
+
+<div class = "formulas">
+  <h3>Basic Math Symbols</h3>
+  <img src="https://i.ytimg.com/vi/BouqkWYlfzg/maxresdefault.jpg" width="500" height="333">
+  <h3></h3>
+  <h3></h3>
+</div>
+
+
+
+</body>
+</html>

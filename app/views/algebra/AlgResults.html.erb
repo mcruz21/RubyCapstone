@@ -15,31 +15,23 @@
     </h1>
 <body style = "background-color: cadetblue">
 
-
 <div class = "IO">
-  <%= form_for :post, url: posts_path do |f| %>
-    <p>
-      <%= f.label :number %>
-      <%= f.text_field :@num %>
-        <br>
-      <%= f.label :number %>
-      <%= f.text_field :@num2 %>
-      <br>
+  <h3>Let's Add <b>SUM</b> Stuff ;D</h3>
+      <%= form_for :algebra_controller , url: algebra_path, method: :get do |f|   %>
+        <%= number_field_tag :a, params[:a] %>
+        <%= select_tag :operation, options_for_select([['+', :sum], ['-',    :subtr]], params[:operation]) %>
+        <%= number_field_tag :b, params[:b] %>
+        <%= f.submit 'Calculate!' %>
+      <% end %>
 
-      <%= f.label :Output %>
-      <%= f.text_field :@AlgResults %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
-  <% end %>
+      <% unless @result.nil? %>
+      <p> = <%= @result %> </p>
+    <% end %>
 </div>
-
+<br>
 <div class = "formulas">
   <h3>Basic Math Symbols</h3>
   <img src="https://i.ytimg.com/vi/BouqkWYlfzg/maxresdefault.jpg" width="500" height="333">
-  <h3></h3>
-  <h3></h3>
 </div>
 
 

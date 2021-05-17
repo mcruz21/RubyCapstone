@@ -11,4 +11,13 @@ class AlgebraController < ApplicationController
     @result = AlgebraController.send(params[:operation], *[params[:a], params[:b]])
   end
 
+  def new
+    @result = Calculator.send(params[:operation], *[params[:a], params[:b]])
+    render :index
+  end
+
+  def index
+
+  end
+
 end

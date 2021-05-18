@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="algebra.css">
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <h1>
+      <img src= <%= @gif1 %> width="200" height="100">
+      <%= @mainTitle %>
+      <img src= <%= @gif2 %> width="200" height="100">
+    </h1>
+<body style = "background-color: cadetblue">
+
+<div class = "IO">
+  <h3><%= @calculatorTitle %></h3>
+      <%= form_for :algebra_controller  , method: :get do |f|   %>
+        <%= number_field_tag :a, params[:a] %>
+        <%= select_tag :operation, options_for_select([['+', :sum], ['-', :subtr]], params[:operation]) %>
+        <%= number_field_tag :b, params[:b] %>
+        <%= f.submit 'Calculate!' %>
+      <% end %>
+      <% unless @result.nil? %>
+      <p> = <%= @result %> </p>
+    <% end %>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<div class = "formulas">
+  <h3><%= @symbolTitle %></h3>
+  <img src=<%= @mathSymbolPicture %> width="500" height="333">
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<h1>Binary Calculator (WIP)</h1>
+
+<%= form_with model: @inputvalue, url: binaryConvert_path do |form| %>
+  <div class="mb-3">
+    <%= form.label :binary %>
+    <%= form.text_field :binary, class: "form-control", placeholder: "101010101" %>
+  </div>
+
+  <div>
+    <%= form.submit "Convert Number" %>
+  </div>
+<% end %>

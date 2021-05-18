@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<div class="container">
+
+  <!--HTML page that converts binary numbers into decimal numbers-->
+  <h1>Binary to Decimal Converter</h1>
+  <%= form_for :post, url: posts_path do |f| %>
+    <p>
+      <%= f.label :number %>
+      <%= f.text_field :number %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+  <!--Binary label and input-->
+  <label>Binary:</label>
+  <input type='text' id='bin' placeholder='Enter Binary Number' value=''>
+
+  <br/>
+
+  <!--Decimal label. Disabled for later on-->
+  <label>Decimal:</label>
+  <input type='text' id='dec' disabled>
+
+  <br/>
+
+  <!--Button to convert the binary number into decimal-->
+  <button id='convertButton'>Convert</button>
+</div>

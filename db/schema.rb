@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_28_070320) do
+ActiveRecord::Schema.define(version: 2021_05_18_001302) do
+
+  create_table "bins", force: :cascade do |t|
+    t.string "binary"
+    t.string "decimal"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "input_values", force: :cascade do |t|
+    t.string "binary"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "pages", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
